@@ -104,10 +104,10 @@ export const TodoList = () => {
           )}
         </Droppable>
       </DragDropContext>
-      <ListItem>
+      <ListItem key="new">
         {/* Just a placeholder element that keeps "Add new item" row aligned */}
         <DragHandle sx={{ visibility: "hidden" }} />
-        <NewTodo key="new" />
+        <NewTodo />
       </ListItem>
     </List>
   );

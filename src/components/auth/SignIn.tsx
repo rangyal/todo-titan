@@ -21,6 +21,8 @@ const SignIn = () => {
   const handleFormSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
+    setError("");
+
     const user = authenticate(username, password);
     if (!user) {
       setError("Wrong username or password");

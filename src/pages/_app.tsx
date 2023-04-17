@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 
 import type { AppProps } from "next/app";
+import Head from "next/head";
 import { useMemo } from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
@@ -30,9 +31,11 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
 
   return (
     <>
-      <meta name="description" content="Simple task management" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="icon" href="/favicon.ico" />
+      <Head>
+        <meta name="description" content="Simple task management" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <UserProvider>

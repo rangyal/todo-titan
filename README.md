@@ -3,6 +3,7 @@
 ## Try it
 
 Find it deployed at: https://todo-titan-rangyal.vercel.app/
+
 Play around with it in CodeSandbox: https://codesandbox.io/p/github/rangyal/todo-titan/main
 
 ## Development

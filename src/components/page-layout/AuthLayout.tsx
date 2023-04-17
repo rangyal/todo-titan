@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 
-import LayoutBase from "@/pages/layout-base";
+import LayoutBase from "./LayoutBase";
 
 export default function AuthLayout({ children }: { children: ReactNode }) {
   return (

@@ -5,10 +5,10 @@ import { useMemo } from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { UserProvider } from "@/components/auth/userStore";
 
-import Layout from "./layout";
-import { NextPageWithLayout } from "./types";
+import type { NextPageWithLayout } from "@/components/page-layout/types";
+import Layout from "@/components/page-layout/Layout";
+import { UserProvider } from "@/components/auth/userStore";
 
 type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;

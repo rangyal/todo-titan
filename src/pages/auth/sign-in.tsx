@@ -1,7 +1,7 @@
 import Head from "next/head";
 
-import type { NextPageWithLayout } from "@/pages/types";
-import AuthLayout from "./auth-layout";
+import type { NextPageWithLayout } from "@/components/page-layout/types";
+import AuthLayout from "@/components/page-layout/AuthLayout";
 import SignIn from "@/components/auth/SignIn";
 
 const SignInPage: NextPageWithLayout = () => {

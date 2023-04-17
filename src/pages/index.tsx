@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Router from "next/router";
 
-import { Todos } from "@/components/todos/Todos";
+import Todos from "@/components/Todos";
 import { useUserContext } from "@/components/auth/userStore";
 import { useEffect } from "react";
 

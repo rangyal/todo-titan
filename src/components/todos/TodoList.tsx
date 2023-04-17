@@ -86,8 +86,10 @@ export const TodoList = () => {
                         }}
                         fullWidth
                         multiline
+                        inputProps={{ "aria-label": `Item ${index + 1}` }}
                       />
                       <IconButton
+                        aria-label="Delete item"
                         edge="end"
                         onClick={() => deleteTodo(todo.id)}
                       >

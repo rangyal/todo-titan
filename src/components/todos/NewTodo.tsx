@@ -24,7 +24,6 @@ const NewTodo = () => {
         disabled={!newTodo}
       />
       <TextField
-        aria-label="New item"
         placeholder="Add new item"
         variant="standard"
         value={newTodo}
@@ -37,8 +36,10 @@ const NewTodo = () => {
         }}
         fullWidth
         multiline
+        inputProps={{ "aria-label": "New item" }}
       />
       <IconButton
+        aria-label="Add item"
         onClick={() => handleAddTodo()}
         disabled={!newTodo}
         edge="end"

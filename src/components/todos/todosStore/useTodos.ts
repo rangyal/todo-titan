@@ -1,13 +1,11 @@
-import { ReactNode, createContext, useContext, useState } from "react";
+import { useState } from "react";
 
-export interface TodoData {
-  id: number;
-  text: string;
-  completed: boolean;
-}
+import type { TodoData } from "./types";
 
 const useTodos = () => {
   const [todos, setTodos] = useState<TodoData[]>([]);
+
+  const load = (todos: TodoData[]) => setTodos(todos);
 
   const addTodo = (text: string, completed = false) => {
     setTodos((currentTodos) => [
@@ -54,6 +52,7 @@ const useTodos = () => {
 
   return {
     todos,
+    load,
     addTodo,
     updateTodoText,
     toggleTodo,
@@ -62,12 +61,4 @@ const useTodos = () => {
   };
 };
 
-const TodosContext = createContext<ReturnType<typeof useTodos> | null>(null);
-
-export const useTodosContext = () => useContext(TodosContext)!;
-
-export function TodosProvider({ children }: { children: ReactNode }) {
-  return (
-    <TodosContext.Provider value={useTodos()}>{children}</TodosContext.Provider>
-  );
-}
+export default useTodos;
